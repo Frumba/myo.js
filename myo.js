@@ -290,6 +290,8 @@
 			if(!id) id = 0;
 			if(Myo.myos[id]) return Myo.myos[id];
 
+			Myo.options = extend(Myo.options, options);
+
 			if(!Myo.socket) Myo.initSocket();
 			if(typeof id === "object") options = id;
 			options = options || {};
